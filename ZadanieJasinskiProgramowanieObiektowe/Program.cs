@@ -66,3 +66,4 @@ else
 {
     Console.WriteLine("Niema takiej opcji.");
 }
+//comment w commitcie
