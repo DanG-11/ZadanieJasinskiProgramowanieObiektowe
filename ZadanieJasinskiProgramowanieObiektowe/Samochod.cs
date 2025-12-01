@@ -32,6 +32,10 @@ namespace ZadanieJasinskiProgramowanieObiektowe
                 Predkosc -= 10;
                 Console.WriteLine($"\nObecna prędkość samachodu to: {Predkosc}");
             }
+            else
+            {
+                Console.WriteLine("\nSamochód już zahamował.");
+            }
         }
     }
 }

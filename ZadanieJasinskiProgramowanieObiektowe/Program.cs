@@ -48,22 +48,30 @@ Console.WriteLine("\nIle chcesz wpłacić?");
 PieniadzeDoWplacenia = Convert.ToDecimal(Console.ReadLine());
 kontoBankowe.Wplac(PieniadzeDoWplacenia);
 
-Console.WriteLine("""
+while (true)
+{
+    Console.WriteLine("""
             Chcesz się rozpędzić czy zachamować?
             1 - Rozpędzić
             2 - Zachamować
+            3 - Koniec
             """);
-int WyborKontroliSamochodu = Convert.ToInt32(Console.ReadLine());
-if (WyborKontroliSamochodu == 1)
-{
-    klasaSamochod.Przyspiesz();
+    int WyborKontroliSamochodu = Convert.ToInt32(Console.ReadLine());
+    if (WyborKontroliSamochodu == 1)
+    {
+        klasaSamochod.Przyspiesz();
+    }
+    else if (WyborKontroliSamochodu == 2)
+    {
+        klasaSamochod.Hamuj();
+    }
+    else if (WyborKontroliSamochodu == 3)
+    {
+        Console.WriteLine("\nKoniec kontroli samochodu.");
+        break;
+    }
+    else
+    {
+        Console.WriteLine("\nNiema takiej opcji.");
+    }
 }
-else if (WyborKontroliSamochodu == 2)
-{
-    klasaSamochod.Hamuj();
-}
-else
-{
-    Console.WriteLine("Niema takiej opcji.");
-}
-//comment w commitcie
