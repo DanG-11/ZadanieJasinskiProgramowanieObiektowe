@@ -16,5 +16,10 @@ namespace ZadanieJasinskiProgramowanieObiektowe
             Console.WriteLine(suma);
             return suma;
         }
+
+        public double Mnozenie(double a, double b)
+        {
+            return a *= b;
+        }
     }
 }

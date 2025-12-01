@@ -51,11 +51,11 @@ kontoBankowe.Wplac(PieniadzeDoWplacenia);
 while (true)
 {
     Console.WriteLine("""
-            Chcesz się rozpędzić czy zachamować?
-            1 - Rozpędzić
-            2 - Zachamować
-            3 - Koniec
-            """);
+                      Chcesz się rozpędzić czy zachamować?
+                      1 - Rozpędzić
+                      2 - Zachamować
+                      3 - Koniec
+                      """);
     int WyborKontroliSamochodu = Convert.ToInt32(Console.ReadLine());
     if (WyborKontroliSamochodu == 1)
     {
@@ -74,4 +74,44 @@ while (true)
     {
         Console.WriteLine("\nNiema takiej opcji.");
     }
+}
+
+double wyplaconaKasa = 0;
+
+Console.WriteLine("""
+                  Chcesz wypłacić pieniądze z konta?
+                  1 - Tak
+                  2 - Nie
+                  """);
+
+int WyborWyplaty = Convert.ToInt32(Console.ReadLine());
+
+if (WyborWyplaty == 1)
+{
+    Console.WriteLine("\nIle chcesz wypłacić?");
+    decimal KwotaWyplaty = Convert.ToDecimal(Console.ReadLine());
+    kontoBankowe.Wyplac(KwotaWyplaty);
+    wyplaconaKasa += Convert.ToDouble(KwotaWyplaty);
+}
+else if (WyborWyplaty == 2)
+{
+    Console.WriteLine("\nKoniec wypłat z konta.");
+}
+else
+{
+    Console.WriteLine("\nNiema takiej opcji.");
+}
+
+double cenaPaliwa = 6.5;
+double litry = 20;
+
+double cenaPaliwaNaWycieczke = kalkulatorek.Mnozenie(cenaPaliwa, litry);
+
+if(wyplaconaKasa >= cenaPaliwaNaWycieczke)
+{
+    Console.Write($"\nZatankowano samochód {klasaSamochod.Marka}");
+}
+else
+{
+    Console.Write("\nWybrałeś za mało gotówki na paliwo.");
 }
