@@ -14,7 +14,11 @@ namespace ZadanieJasinskiProgramowanieObiektowe
 
         private int _predkosc;
 
-        public string Marka { get;  set; }
+        public string Marka
+        {
+            get { return _marka; }
+            set { _marka = value; }
+        }
 
         public int RokProdukcji {
             get { return _rokProdukcji; }
@@ -31,7 +35,11 @@ namespace ZadanieJasinskiProgramowanieObiektowe
             }
         }
 
-        int Predkosc = 0;
+        public int Predkosc
+        {
+            get { return _predkosc; }
+            set { _predkosc = value; }
+        }
 
         public Samochod(string marka, int rokProdukcji)
         {
