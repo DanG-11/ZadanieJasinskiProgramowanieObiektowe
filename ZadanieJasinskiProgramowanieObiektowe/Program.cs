@@ -1,8 +1,8 @@
 ﻿using ZadanieJasinskiProgramowanieObiektowe;
 
-Samochod klasaSamochod = new Samochod("Fiar", 2010);
+Samochod klasaSamochod = new Samochod("Fiar", 1700);
 
-Samochod auto1 = new Samochod("BMW", 2022);
+Samochod auto1 = new Samochod("BMW", 2100);
 Samochod auto2 = new Samochod("Audi", 2023);
 
 Kalkulator kalkulatorek = new Kalkulator();
