@@ -9,10 +9,21 @@ namespace ZadanieJasinskiProgramowanieObiektowe
 {
     internal class Samochod
     {
-        public string Marka;
-        public int RokProdukcji;
+        private string _marka;
+        private string _rokProdukcji;
+
+        private int _predkosc;
+
+        public string Marka { get; set; }
+        public int RokProdukcji { get; set; }
 
         int Predkosc = 0;
+
+        public Samochod(string marka, int rokProdukcji)
+        {
+            Marka = marka;
+            RokProdukcji = rokProdukcji;
+        }
 
         public void Jedz()
         {
