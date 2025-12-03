@@ -8,7 +8,7 @@ namespace ZadanieJasinskiProgramowanieObiektowe
 {
     internal class KontoBankowe
     {
-        public decimal Saldo = 0;
+        public decimal Saldo { get; private set; } = 0;
 
         public void Wplac(decimal kwota)
         {
