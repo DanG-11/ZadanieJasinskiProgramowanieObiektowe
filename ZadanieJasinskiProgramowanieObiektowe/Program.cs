@@ -1,22 +1,22 @@
 ﻿using ZadanieJasinskiProgramowanieObiektowe;
 
-Samochod klasaSamochod = new Samochod();
+Samochod klasaSamochod = new Samochod("Fiar", 1700);
 
-Samochod auto1 = new Samochod();
-Samochod auto2 = new Samochod();
+Samochod auto1 = new Samochod("BMW", 2100);
+Samochod auto2 = new Samochod("Audi", 2023);
 
 Kalkulator kalkulatorek = new Kalkulator();
 
 KontoBankowe kontoBankowe = new KontoBankowe();
 
-klasaSamochod.Marka = "Fiat";
-klasaSamochod.RokProdukcji = 2010;
+//klasaSamochod.Marka = "Fiat";
+//klasaSamochod.RokProdukcji = 2010;
 
-auto1.Marka = "BMW";
-auto1.RokProdukcji = 2022;
+//auto1.Marka = "BMW";
+//auto1.RokProdukcji = 2022;
 
-auto2.Marka = "Audi";
-auto2.RokProdukcji = 2023;
+//auto2.Marka = "Audi";
+//auto2.RokProdukcji = 2023;
 
 Console.WriteLine(klasaSamochod.Marka);
 Console.WriteLine(klasaSamochod.RokProdukcji);

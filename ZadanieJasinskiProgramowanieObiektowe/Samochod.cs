@@ -9,10 +9,35 @@ namespace ZadanieJasinskiProgramowanieObiektowe
 {
     internal class Samochod
     {
-        public string Marka;
-        public int RokProdukcji;
+        private string _marka;
+        private int _rokProdukcji;
+
+        private int _predkosc;
+
+        public string Marka { get;  set; }
+
+        public int RokProdukcji {
+            get { return _rokProdukcji; }
+            set {
+                int obecnyRok = DateTime.Now.Year;
+                if (value < 1886 || value > obecnyRok)
+                {
+                    _rokProdukcji = 2000;
+                }
+                else
+                {
+                    _rokProdukcji = value;
+                }
+            }
+        }
 
         int Predkosc = 0;
+
+        public Samochod(string marka, int rokProdukcji)
+        {
+            Marka = marka;
+            RokProdukcji = rokProdukcji;
+        }
 
         public void Jedz()
         {
